@@ -3,7 +3,48 @@
 
 ---
 
+## Scope
+Implement jQuery to create a bar chart API. The user would use functions in javascript with data, various options and an element to draw the chart inside.
 
+Options should include:
+* width and height of chart //should I do this part?
+* horizontal or vertical chart
+* reset 0 (ie start the y axis off at greater than zero)
+* bars
+  * color: roygbiv, named themes(1-3), custom as array or each
+  * outline: none, ??
+* display of value
+  * show: yes, no
+  * location: bar-end, bar-past(just above or right of the bar), bar-start, bar-center, 
+  * font size: default(how to define this?, by location?), custom
+  * font-color: black, custom
+  * orientation: in-line with bar, horizontal, vertical 
+  * round-type: round, ceil, floor
+  * precision: 2, integer 
+* display of bar title
+  * show: yes, no
+  * text: 
+  * location: bottom, inline, top
+  * font size:
+  * font-style: underline, no underline
+  * font-color: black, custom
+* display of y-axis
+  * show: yes, no
+  * range:
+  * range-label
+    * precision:
+    * orientation:  
+  * tick options: tick, none
+  * text-title
+    * show: yes, no
+    * text:
+    * font-size: smart default, custom
+    * font-color: black, custom
+
+* ```function drawBarChart(data, options, element);```
+  * ```data = [...Arr]//array of values of some length ```
+  * ```options = { object detailing the options selected }```
+  * ```element = element in which to insert this chart```
 
 for original prompt find below:
 
@@ -27,13 +68,13 @@ Try to break your solution down into small functions that will work together to 
 You should have a simple API to draw a bar chart. The function should be used by your HTML page to render the chart into your demo page. The signature of the function should be as follows:
 
 ```drawBarChart(data, options, element);```
-The data parameter will be the data the chart should work from Start with just an Array of numbers
+* The data parameter will be the data the chart should work from Start with just an Array of numbers
 e.g. [1, 2, 3, 4, 5]
 
-The options parameter should be an object which has options for the chart.
+* The options parameter should be an object which has options for the chart.
 e.g. width and height of the bar chart
 
-The element parameter should be a DOM element or jQuery element that the chart will get rendered into.
+* The element parameter should be a DOM element or jQuery element that the chart will get rendered into.
 
 ## **Display Requirements**
 ### **Bar Chart**
