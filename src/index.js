@@ -1,8 +1,17 @@
-function who(){
-  document.getElementById('who').innerHTML += 'who?';
+let button = document.getElementById("button");
+let chorus = document.getElementById("chorus");
+
+console.log(button + ' ' + chorus);
+
+if(button){
+  button.addEventListener('click', who)
+  }
+else{
+console.log('Why doesn\'t button exist?');
 }
 
-document.getElementById('test').addEventListener("click", who);
-
+  function who() {
+    chorus.innerText += 'who?';
+  }
 
 
