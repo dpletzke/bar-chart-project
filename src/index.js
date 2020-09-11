@@ -1,17 +1,13 @@
-let button = document.getElementById("button");
-let chorus = document.getElementById("chorus");
+let button = $("#button");
+button.css("background-color","orange");
+let chorus = $("#chorus");
 
-console.log(button + ' ' + chorus);
+button.on("click", who);
 
-if(button){
-  button.addEventListener('click', who)
-  }
-else{
-console.log('Why doesn\'t button exist?');
-}
+
 
   function who() {
-    chorus.innerText += 'who?';
+    chorus.text((i, text) => text + 'who?');
   }
 
 
